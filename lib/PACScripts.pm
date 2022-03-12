@@ -1598,6 +1598,7 @@ sub _execScript {
 
     # Save the list of started connections in $SHARED{_list_}
     $SHARED{_list_} = $PAC{list};
+    $SHARED{env} = $COMMON{cfg}(0)->{environments};
 
     # CONNECTION execution (asbru_conn)
     foreach my $tmp_uuid (keys %{$PAC{list}}) {
